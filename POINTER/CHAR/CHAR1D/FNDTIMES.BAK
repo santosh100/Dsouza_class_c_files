@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+	char *n,m;
+	int i,j,x;
+	clrscr();
+	prtntf("\n Enter size of pointer: ");
+	scanf("%d",&x);
+	n=(char*)calloc(x,sizeof(char));
+	printf("\n Enter string: ");
+	fflush(stdin);
+	gets(n);
+	printf("\n Enter any character to find: ");
+	m=getchar();
+	for(i=0,j=0;*(n+i)!='\0';i++)
+	{
+		if(*(n+i)==m)
+		    j++;
+	}
+	printf("\n character found %d times",j);
+}

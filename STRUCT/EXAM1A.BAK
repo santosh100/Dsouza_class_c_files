@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+struct emp
+{
+	int empno;
+	char name[20];
+	int salary;
+	char job[20];
+};
+void main()
+{
+	struct emp x;
+	clrscr();
+	printf("\n Enter empno,name,salary,job ");
+	scanf("%d%s%d%s",&x.empno,x.name,&x.salary,x.job);
+}

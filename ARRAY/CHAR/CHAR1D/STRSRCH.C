@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	char n[20],m[20];
+	int i,j,k,flag=0;
+	clrscr();
+	printf("\n Enter string: ");
+	gets(n);
+	printf("\n Enter string to search: ");
+	gets(m);
+	for(i=0;n[i]!='\0';i++)
+	{
+		if(n[i]==m[0])
+		{
+			for(j=1,k=i+1;m[j]!='\0';j++,k++)
+			{
+			  if(n[k]!=m[j])
+			    break;
+			  if(m[j+1]=='\0')
+			    flag=1;
+			}
+		}
+		if(flag==1)
+			  break;
+	}
+	if(flag==1)
+		printf("\n search completed found %s",m);
+	else
+		printf("\n search conpleted not found %s",m);
+}

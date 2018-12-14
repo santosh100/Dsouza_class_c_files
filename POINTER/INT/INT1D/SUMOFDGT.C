@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+void input(int*p,int n)
+{
+	int i;
+	printf("\n Enter %d values: ",n);
+	for(i=0;i<n;i++)
+	    scanf("%d",(p+i));
+}
+void sumofdgt(int*pa,int*pb,int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+	    for(*(pb+i)=0;*(pa+i)>0;*(pa+i)/=10)
+		*(pb+i)+=*(pa+i)%10;
+	}
+}
+void print(int*pb,int n)
+{
+	int i;
+	printf("\n printing sum of digits");
+	for(i=0;i<n;i++)
+	    printf("%5d",*(pb+i));
+}
+void main()
+{
+	int *a,*b,*c,x;
+	clrscr();
+	printf("\n Enter size of pointer: ");
+	scanf("%d",&x);
+	a=(int*)malloc(x*sizeof(int));
+	b=(int*)malloc(x*sizeof(int));
+	input(a,x);
+	sumofdgt(a,b,x);
+	print(b,x);
+}

@@ -1,0 +1,46 @@
+			   /* the compiler allocates a piece of storage
+			   that is large enough to hold the largest variable type in the union.
+			   means when we use union the compiler allocates it's largest variable's storage(size).
+			   Union can handle only one member at a time. */
+			   //watch this example
+#include<stdio.h>
+#include<conio.h>
+union emp
+    {
+	int hra;
+	float da;
+	double basic;
+    }x;
+
+    void main()
+	{
+      //	   emp x;
+	   int ch;
+	   clrscr();
+	   printf("\n 1. hra ");
+	   printf("\n 2. da ");
+	   printf("\n 3. basic ");
+	   printf("\n 4. enter choice ");
+	   scanf("%d",&ch);
+	switch(ch)
+	    {
+	    case 1:
+			printf("\n enter  hra: ");
+			scanf("%d",&x.hra);
+			printf("\n hra: ",x.hra);
+
+			break;
+	    case 2:
+			printf("\n enter da: ");
+			scanf("%d",&x.da);
+			printf("\n da: ",x.da);
+
+			break;
+	    case 3:
+			printf("\n enter basic: ");
+			scanf("%d",&x.basic);
+			printf("\n basic: ",x.basic);
+			break;
+	    }
+	       getch();
+	}

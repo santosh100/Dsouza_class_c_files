@@ -1,0 +1,8 @@
+#include<stdio.h>
+#include<conio.h>
+#include"sahu.c"
+void main()
+{
+	table();
+	fact();
+}

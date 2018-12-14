@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+#include<string.h>
+void main()
+{
+	char *n;
+	int i,k,l=0,x;
+	clrscr();
+	printf("\n Enter size of pointer: ");
+	scanf("%d",x);
+	n=(char*)calloc(x,sizeof(char));
+	printf("\n Enter string: ");
+	fflush(stdin);
+	gets(n);
+	l=strupr(n);
+	for(i=0,k=l-1;i<l/2;i++)
+	{
+	    if(*(n+i)!=*(n+k))
+		break;
+	    k--;
+	}
+	if(i==l/2)
+		printf("\n %s is palindrom",n);
+	else
+		printf("\n %s is not palindrom",n);
+
+}

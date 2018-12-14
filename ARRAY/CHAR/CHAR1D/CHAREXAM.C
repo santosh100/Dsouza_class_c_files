@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	char n[20];
+	int i=0;
+	clrscr();
+	printf("\n Enter name: ");
+	gets(n);
+	printf("\n name = %s",n);
+	while(n[i]!='\0')
+		i++;
+	printf("\n length = %d",i);
+		i--;
+	printf("\n Name in reverse: ");
+	while(i>=0)
+	{
+		printf("%c",n[i]);
+		i--;
+}       }

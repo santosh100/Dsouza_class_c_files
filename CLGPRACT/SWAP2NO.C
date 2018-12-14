@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a,b;
+	clrscr();
+	printf("\n Enter two no's: ");
+	scanf("%d%d",&a,&b);
+	printf("\n no before swap:\n a = %d\n b = %d",a,b);
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	printf("\n no after swap:\n a = %d\n b = %d",a,b);
+}

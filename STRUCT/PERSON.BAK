@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+struct personal
+{
+	char	name[20];
+	int 	salary;
+	char	grade;
+};
+void main()
+{
+	struct personal person;
+	printf("\n Enter values: ");
+	scanf("%s%d",person.name,&person.salary,);
+	fflush(stdin);
+	scanf("%c",&person.grade);
+	printf("%s%5d%5c",person.name,person.salary,person.grade);
+}

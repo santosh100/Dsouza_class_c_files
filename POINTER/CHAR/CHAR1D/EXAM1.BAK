@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+int i=0;
+void input(char *n)
+{
+	fflush(stdin);
+	printf("\n Enter string: ");
+	gets(n);
+}
+void lenth(char *n)
+{
+	while(*(n+i)!='\0')
+		i++;
+	printf("\n lenth = %d",i);
+	i--;
+}
+void rev(char *n)
+{
+	printf("\n Name in reverse: ");
+	while(i>=0)
+	{
+	    printf("%c",*(n+i));
+	    i--;
+	}
+}
+void main()
+{
+	char *n;
+	int x;
+	clrscr();
+	printf("\n Enter size of pointer: ");
+	scanf("%d",&x);
+	n=(char*)calloc(x,sizeof(char));
+	input(n);
+	lenth(n);
+	rev(n);
+}

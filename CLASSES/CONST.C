@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    const int i=5;         // can not be changed
+	clrscr();
+	printf("%5d",i);
+
+    //	i=10;
+	printf("%5d",i);
+
+}

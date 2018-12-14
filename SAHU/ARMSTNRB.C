@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n=2,p=0,s,t;
+	clrscr();
+	while(n<=1000)
+	{
+		s=0;
+		p=n;
+		while(p>0)
+		{
+			t=p%10;
+			s=s+t*t*t;
+			p/=10;
+		}
+		if(s==n)
+			printf("\nArmstrong no:= %d",n);
+	n++;
+	}
+}

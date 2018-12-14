@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+union abc
+    {
+	int empno;
+	char name[20];
+	int basic;
+    }ob;
+
+    void main()
+	{
+	clrscr();
+	scanf("%d",&ob.empno);
+	fflush(stdin);
+	gets(ob.name);scanf("%d",&ob.basic);
+	printf("\n empno=%d",ob.empno);
+	printf("\n name = %s",ob.name);
+	printf("\n basic=%d",ob.basic);
+	getch();
+	}

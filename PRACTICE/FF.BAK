@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+void main()
+{
+	char fname[20];
+	FILE *fp;
+	int bulb=0;
+	clrscr();
+	textcolor(BLINK);
+	textbackground(2);
+	printf("\n Enter file name to open: ");
+	gets(fname);
+	fp=fopen(fname,"r+");
+	if(fp==NULL)
+	{
+	    fp=fopen(fname,"w");
+	    bulb=1;
+	}
+	if(fp==NULL)
+	{
+	    cprintf("\n file can not be openned...........");
+	    return;
+	}
+	if(bulb==0)
+	    fseek(fp,0,2);
+	while((fscanf(stdin,"%s",fname))!=EOF);
+	rewind(fp);
+	printf("\n the contents of the file %s are",fname);
+	while((fputs(fp))!=EOF);
+	fclose(fp);
+}

@@ -1,0 +1,17 @@
+void table()
+{
+	int n,i;
+	printf("\n Enter any no to find table: ");
+	scanf("%d",&n);
+	for(i=1;i<=10;i++)
+		printf("\n %d",n*i);
+}
+void fact()
+{
+	int n,t=1;
+	printf("\n Enter any no to find factorial ");
+	scanf("%d",&n);
+	  for( ;n>1;n--)
+		t=t*n;
+	  printf("\n factorial: %d",t);
+}

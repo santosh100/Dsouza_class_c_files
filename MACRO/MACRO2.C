@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+#define PI 3.1415
+#define AREA(x) (PI*x*x)
+#define CUBE(x) (x*x*x)
+#define HLINE for (i=1;i<=50;i++)\
+			printf("%c",196);
+
+void main()                                    // " \ " is used for continuetion
+    {
+	int a=2,i;
+	clrscr();
+	printf("\n area is %lf",AREA(a));
+	printf("\n");
+	HLINE
+	printf("\n cube of a=%d\n",CUBE(a));
+	HLINE
+    }

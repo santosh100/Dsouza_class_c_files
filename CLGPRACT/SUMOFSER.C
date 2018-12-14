@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	double n,sum=0,i;
+	clrscr();
+	printf("\n please give the value of n: ");
+	scanf("%lf",&n);
+	for(i=1;i<=n;i++)
+	{
+	    sum+=(1/i);
+	    if(i==1)
+		printf("\n 1 + ");
+	    else
+		if(i==n)
+		    printf("1/%.lf",i);
+		else
+		    printf("1/%.lf + ",i);
+	}
+	printf("\n the sum of this series is %.2lf",sum);
+}

@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	FILE *p1,*p2,*p3;
+	int no;
+	clrscr();
+	p1=fopen("data","w");
+	printf("\n Enter no enter minus value to exit: \n");
+	while(1)
+	{
+		scanf("%d",&no);
+		if(no<0)
+		    break;
+		putw(no,p1);
+	}
+	fclose(p1);
+	p1=fopen("data","r");
+	p2=fopen("even","w");
+	p3=fopen("odd","w");
+	while((no=getw(p1))!=EOF)
+	{
+		if(no%2==0)
+		    putw(no,p2);
+		else
+		    putw(no,p3);
+	}
+	fclose(p2);
+	fclose(p3);
+	fclose(p1);
+	printf("\n contents of even file: \n ");
+	p2=fopen("even","r");
+	while((no=getw(p2))!=EOF)
+		printf("%5d",no);
+	fclose(p2);
+	printf("\n contents of odd file: \n");
+	p2=fopen("odd","r");
+	while((no==gerw(p2))!=EOF)
+		printf("%5d",no);
+	fclose(p2);
+	getch();
+}

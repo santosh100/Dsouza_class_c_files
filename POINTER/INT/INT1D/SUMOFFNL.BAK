@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+void input(int*pa,int n)
+{
+	int i;
+	printf("\n Enter %d values: ",n);
+	for(i=0;i<n;i++)
+	    scanf("%d",(pa+i));
+}
+void fandlsum(int*pa,int*pb,int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+	    *(pb+i)=*(pa+i)%10;
+	    for( ;*(pa+i)>=10;*(pa+i)/=10);
+	    *(pb+i)+=*(pa+i);
+	}
+}
+void print(int*pb,int n)
+{
+	int i;
+	printf("\n printing %d values; ",n);
+	for(i=0;i<n;i++)
+	    printf("%5d",*(pb+i));
+}
+void main()
+{
+	int *a,*b,x;
+	clrscr();
+	printf("\n Enter size of pointer: ");
+	scanf("%d",&x);
+	a=(int*)malloc(x*sizeof(int*));
+	b=(int*)malloc(x*sizeof(int*));
+	input(a,x);
+	fandlsum(a,b,x);
+	print(b,x);
+}

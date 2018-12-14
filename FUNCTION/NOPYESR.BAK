@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+long int fact(int n)
+{
+	long int t=1;
+	while(n>1)
+	{
+	    t=t*n;
+	    n--;
+	}
+	return(t);
+}
+long int sumof5fact()
+{
+	long int f=0;
+	int i,n;
+	printf("\n Enter 5 no to get sum of 5 factorial: ");
+	for(i=1;i<=5;i++)
+	{
+	    scanf("%d",&n);
+	    f+=fact(n);
+	}
+	return (f);
+}
+void main()
+{
+	long int t;
+	clrscr();
+	t=sumof5fact();
+	printf("\n sum is %ld",t);
+}

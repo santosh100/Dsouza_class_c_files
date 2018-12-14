@@ -1,0 +1,20 @@
+			/* Example1 of no argument/parameter no return */
+#include<stdio.h>
+#include<conio.h>
+void printline()
+{
+	int i;
+	printf("\n");
+	for(i=1;i<=50;i++)
+	    printf("*");
+}
+void main()
+{
+	char n[20];
+	clrscr();
+	printf("\n Enter name: ");
+	gets(n);
+	printline();
+	printf("\n name = %s",n);
+	printline();
+}

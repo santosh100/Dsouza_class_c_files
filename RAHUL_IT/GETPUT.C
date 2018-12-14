@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	char ans[5];
+	clrscr();
+
+	printf("Enter String: ");
+	fflush(stdin);
+     //	scanf("%c",&ans);
+	gets(ans);
+
+	printf("%s",ans);
+	    //or
+      //puts(ans);
+      getch();
+}

@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int day;
+	clrscr();
+	printf("\n Enter no between 1 to 7 to choose a day: ");
+	scanf("%d",&day);
+	switch(day)
+	{
+	case 1 :
+		printf("\n Sunday");
+		break;
+	case 2 :
+		printf("\n Monday");
+		break;
+	case 3 :
+		printf("\n Tuesday");
+		break;
+	case 4 :
+		printf("\n Wednesday");
+		break;
+	case 5 :
+		printf("\n Thursday");
+		break;
+	case 6 :
+		printf("\n Friday");
+		break;
+	case 7 :
+		printf("\n Saturday");
+		break;
+	default :
+		printf("\n you have Entered wrong no");
+	}
+}

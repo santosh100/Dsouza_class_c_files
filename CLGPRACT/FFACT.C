@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+void fact()
+{
+	int n,s;
+	clrscr();
+	printf("\n Enter any to find factorial: ");
+	scanf("%d",&n);
+	for(s=1;n>1;n--)
+		s=s*n;
+	printf("\n factoriaal = %d",s);
+}
+void main()
+{
+	fact();
+}

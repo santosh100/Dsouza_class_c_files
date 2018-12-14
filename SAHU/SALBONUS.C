@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int sal,bonus=0;
+	clrscr();
+	printf("enter your salry\n ");
+	scanf("%d",&sal);
+	if(sal<1000)
+		bonus=0;
+	else
+		if(sal<=5000)
+			bonus=sal*.1;
+		else
+			if(sal<=10000)
+				bonus=sal*.08;
+			else
+				if(sal<=15000)
+					bonus=sal*.05;
+	printf("bonus=%d",bonus);
+	getch();
+}

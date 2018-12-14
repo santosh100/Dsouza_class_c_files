@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,p,t,s;
+	clrscr();
+	for(n=2;n<=1000;n++)
+	{
+		for(p=n,t=0,s=0;p>0;p/=10)
+		{
+			t=p%10;
+			s=s+t*t*t;
+		}
+		if(s==n)
+		printf("\nArmstrong no:= %d",n);
+	}
+}
